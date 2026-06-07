@@ -1,0 +1,34 @@
+<h1><b>Guess the Number From 1 to 10</b></h1><br>
+<input id="usernum" type="number">
+<button onclick="checkbtn()">check</button><br>
+<p id="result">Your are RIGHT/WRONG</p><br>
+<p id="score">Your Score:10</p>
+
+
+<script>
+    var usernum=document.getElementById("usernum")
+
+    var result=document.getElementById("result")
+    
+    var score=document.getElementById("score")
+    var score1=10
+
+    function checkbtn(){
+        var sysnum=Math.floor(Math.random()*10)
+        var usernum3=Number(usernum.value)
+        console.log(sysnum)
+
+        if(usernum3==sysnum){
+            result.textContent="You are WIN $$$"
+            console.log("rigth")
+        }
+
+        else{
+            result.textContent="You are WRONG !"
+            console.log("wrong")
+            score1=score1-1
+            score.textContent="Your Score:"+score1
+        }
+
+    }
+</script>
